@@ -37,3 +37,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+// Toggle class _active by clicking on interactive "how it works" item
+var tagItems = document.querySelectorAll('.how-it-works__tag');
+[].forEach.call(tagItems, function(el, i, tagItems) {
+    el.addEventListener('click', function() {
+        [].forEach.call(tagItems, function(el) {
+            if(el !== this) {
+                el.classList.remove("_active");
+            } else {
+                el.classList.toggle("_active");
+            }
+        }, this);
+    });
+});
+
+function _removeClasses() {
+    for (var i = 0; i < tagItems.length; i++) {
+        tagItems[i].classList.remove('_active')
+    }
+}
+
