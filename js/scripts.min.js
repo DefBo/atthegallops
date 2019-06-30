@@ -59,3 +59,12 @@ function _removeClasses() {
     }
 }
 
+// Loader function
+window.addEventListener('load',function(){
+    setTimeout(addClassLoaded, 1000);
+
+    function addClassLoaded() {
+        document.querySelector('body').classList.add("loaded");
+    }
+});
+
