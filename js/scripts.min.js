@@ -53,12 +53,6 @@ var tagItems = document.querySelectorAll('.how-it-works__tag');
     });
 });
 
-function _removeClasses() {
-    for (var i = 0; i < tagItems.length; i++) {
-        tagItems[i].classList.remove('_active')
-    }
-}
-
 // Toggle class _active by clicking on interactive "team-member" item
 var tagItems = document.querySelectorAll('.team__member');
 [].forEach.call(tagItems, function(el, i, tagItems) {
@@ -72,3 +66,27 @@ var tagItems = document.querySelectorAll('.team__member');
         }, this);
     });
 });
+
+function _removeClasses() {
+    var tagItems = document.querySelectorAll('.how-it-works__tag');
+    [].forEach.call(tagItems, function(el) {
+        el.classList.remove("_active");
+    }, this);
+}
+
+// Make camera toggle be active on load for desktop devices
+function addActiveToggle(x) {
+    var cameraTagItem = document.getElementById("camera-tag");
+
+    if (x.matches) {
+        cameraTagItem.classList.add("_active");
+    } else {
+        cameraTagItem.classList.remove("_active");
+    }
+}
+
+var x = window.matchMedia("(min-width: 1025px)");
+addActiveToggle(x);
+x.addListener(addActiveToggle);
+
+
