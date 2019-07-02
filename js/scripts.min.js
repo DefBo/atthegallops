@@ -59,12 +59,16 @@ function _removeClasses() {
     }
 }
 
-// Loader function
-window.addEventListener('load',function(){
-    setTimeout(addClassLoaded, 1000);
-
-    function addClassLoaded() {
-        document.querySelector('body').classList.add("loaded");
-    }
+// Toggle class _active by clicking on interactive "team-member" item
+var tagItems = document.querySelectorAll('.team__member');
+[].forEach.call(tagItems, function(el, i, tagItems) {
+    el.addEventListener('click', function() {
+        [].forEach.call(tagItems, function(el) {
+            if(el !== this) {
+                el.parentNode.classList.remove("_active");
+            } else {
+                el.parentNode.classList.add("_active");
+            }
+        }, this);
+    });
 });
-
