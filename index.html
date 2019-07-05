@@ -17,6 +17,8 @@
 	<!-- Template Basic Images End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
+
+	<link href="https://vjs.zencdn.net/5.18.4/video-js.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,7 +45,7 @@
 					<div class="col">
 						<h1 class="in-action__heading">At the gallops</h1>
 						<p class="in-action__subheading">Solar powered racehorse gallops cameras</p>
-						<p class="in-action__description">Horse racing is a competitive market and nowhere is it more competitive than in the quest for new owners. At The Gallops gives you the opportunity to connect your horses in training to your owners and social media followers, in real time, from anywhere in the world.</p>
+						<p class="in-action__description">At The Gallops connects your horses to your owners and social media followers, in real time, from anywhere in the world.</p>
 					</div>
 				</div>
 			</div>
@@ -72,7 +74,17 @@
 	<section class="trainer-view" id="div_trainer-view">
 		<div class="trainer-view__content">
 			<div class="trainer-view__video">
-				<iframe src="https://www.youtube.com/embed/s9Ab0veV6r4?autoplay=1&loop=1&mute=1"></iframe>
+				<video id="my_video_1" class="video-js vjs-default-skin h-100" 
+					data-setup='{
+					"autoplay": true, 
+					"controls": true, 
+					"preload": "auto", 
+					"fluid": true,
+					"poster": "https://livestream.agricamera.co.uk/931-gallops-camera-iframe/snapshot.jpg"
+					}'>
+					<source src="https://livestream.agricamera.co.uk:8081/agricamera/kimbailey/playlist.m3u8" type="application/x-mpegURL">
+				</video>
+			
 			</div>
 
 			<div class="container">
@@ -96,10 +108,7 @@
 					<div class="col">
 						<h2 class="heading_2">At the Gallops Dashboard</h2>
 						<p class="description">
-							Based on our own proprietary technology developed over 7 years, the online dashboard and mobile app operates the cameras on phone, tablet, laptop and personal computer. There is no complex technology setup.
-						</p>
-						<p class="description">
-							A tried and tested and fully supported solution, At The Gallops connects to the internet via a wireless link from your office or home broadband or alternatively, via a 4G system.
+							At The Gallops connects the camera to the internet via wireless or 4G technology. Simple to setup, our online dashboard and mobile app allows your owners to view the cameras on their smartphone, tablet, laptop or personal computer. 
 						</p>
 
 						<div class="dashboard__inner">
@@ -122,7 +131,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
 					</i>
 					<p class="dashboard__features-item-text">
-						Complete control over access; you decide who and when
+						Complete control over access
 					</p>
 				</div>
 			</div>
@@ -132,7 +141,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
 					</i>
 					<p class="dashboard__features-item-text">
-						Streaming live, recorded or delayed pictures
+						Live, recorded or delayed pictures
 					</p>
 				</div>
 			</div>
@@ -142,7 +151,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line></svg>
 					</i>
 					<p class="dashboard__features-item-text">
-						Technology platform embedded in your website or a dedicated App
+						Embedded in your website or App
 					</p>
 				</div>
 			</div>
@@ -152,7 +161,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
 					</i>
 					<p class="dashboard__features-item-text">
-						Any internet connected device from anywhere in the world
+						Any internet device, anywhere in the world
 					</p>
 				</div>
 			</div>
@@ -162,7 +171,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye-off"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
 					</i>
 					<p class="dashboard__features-item-text">
-						Viewing is private or public – you choose
+						Private or public viewing
 					</p>
 				</div>
 			</div>
@@ -180,14 +189,13 @@
             <div class="row">
                 <div class="col-lg-8">
                     <p class="description">
-                        Our price for a complete single camera system including installation is £4,595 (excl. VAT) plus At The Gallops care.
+                        Our price for a complete single camera system including installation is £4,995 (excl. VAT).
                     </p>
                     <ul class="description">
                         <li>Software</li>
-                        <li>Camera</li>
-                        <li>Camera and solar mounting</li>
+						<li>Camera</li>
+						<li>Solar panels*</li>
                         <li>Wireless transmitters or 4G router</li>
-                        <li>Solar panels*</li>
                         <li>Waterproof power supply</li>
                         <li>Interface Unit (IFU)</li>
                         <li>Battery pack</li>
@@ -232,7 +240,7 @@
 								</i>
 							</div>
 							<div class="how-it-works__tag-tooltip-body">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Heavy duty mounting kit for both the camera and solar installation, including all required cables to suit your installation. Important: At The Gallops requires local installation on site.
 							</div>
 						</div>
 
@@ -249,7 +257,7 @@
 								</i>
 							</div>
 							<div class="how-it-works__tag-tooltip-body">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Solar panels absorb the sun's rays and convert them into electricity. A sustainable solution. The electricity generated charges the batteries and runs the camera(s). The kit comes with batteries, control unit and all cables.
 							</div>
 						</div>
 
@@ -266,7 +274,7 @@
 								</i>
 							</div>
 							<div class="how-it-works__tag-tooltip-body">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								The camera is a full high definition, 60 frame per second camera that will give your owners access to see the horses train on a daily basis. The camera is fixed in one possition however if you would like more than one view, perhaps a zoomed in view of the start of the gallops and a second looking at the top of the gallops then you can have two cameras in one or multiple locations as required. 
 							</div>
 						</div>
 
@@ -283,8 +291,11 @@
 								</i>
 							</div>
 							<div class="how-it-works__tag-tooltip-body">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								The wireless transmitters/receivers connect the broadband to the At The Gallops camera. With 'line of sight' they can work over a distance of 2km. They are waterproof and capable of internal or external.
+								<p>Where wireless broadband is not available, we can supply a 4G solution. As long as you have a 4G telephone signal, a contract can be supplied and the cameras will connect to the internet. </p>
+
 							</div>
+							
 						</div>
 
                         <div class="how-it-works__tag _platform">
@@ -300,7 +311,7 @@
 								</i>
 							</div>
 							<div class="how-it-works__tag-tooltip-body">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								The At The Gallops software and dashboard allows complete control over the software, including our ability to remotely manage and solve problems for you. We supply an App. for downloading onto internet connect device allowing remote viewing to anyone that you allow.
 							</div>
 						</div>
 
@@ -325,7 +336,7 @@
                 </div>
             </div>
 			<div class="row">
-				<div class="col-xl-5 col-lg-6">
+				<div class="col-xl-12 col-lg-12">
 					<p class="description">
 						We don’t sell a camera; we sell a camera solution. At The Gallops Care is an annual subscription of £400 plus VAT per year per site, no matter how many cameras you have. It is free in the first year.
 					</p>
@@ -384,10 +395,7 @@
             <div class="row">
                 <div class="col">
                     <p class="description">
-                        A modular system – what other cameras do you need from the same platform?
-                    </p>
-                    <p class="description">
-                        At The Gallops is based on a modular system running through the same technology platform where you have full control to access.
+                        At The Gallops is modular, easily capable of adding security, stable and foaling options.
                     </p>
                     <p class="description">
                         <b>Yard security</b> <br>
@@ -401,10 +409,7 @@
                     </ul>
                     <p class="description">
                         <b>Foaling and stable cameras</b> <br>
-                        Our cameras are great in foaling boxes too, all using the same technology platform.
-                        There are no restrictions as to how many cameras you can add. What about giving your
-                        owners individual access to their horses in the stable? The sky is the limit in terms of the
-                        access that you can give and the engagement you create.
+                        There are no limits to the number of cameras you can add. What about giving owners indervidual access to horses in their stable?
                     </p>
                     <p class="description">
                         Please use the contact form to send us a message or call us now on <a href="tel:+4401271828407" class="section-footer__link">+44 (0) 1271 828407</a> to discuss
@@ -542,16 +547,16 @@
 
 				<div class="col team__member-info-wrap">
 					<p class="description team__member-info _first">
-						<b>Jake</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<b>Jake</b> is the founder of Rugged Networks Limited and the AgriCamera proposition. His role is to draw on his technical skills and farming knowledge to innovate; he works with the platform development team to constantly evolve our service delivery in light of a fast moving technological environment.  
 					</p>
 					<p class="description team__member-info _second">
-						<b>Ben</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<b>Ben</b> joined the business in 2014 and has developed his own technical knowledge so as to be a true product expert. He utilises this knowledge to provide quality control at point of sale, ensure system set up on delivery and to solve customer problems as they arise.
 					</p>
 					<p class="description team__member-info _third">
 						<b>Mark</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
 					<p class="description team__member-info _fourth">
-						<b>Rob</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<b>Rob</b> is a highly experienced finance professional and business builder who has held a number of high profile roles in the professions and wealth management. He has been involved in the strategic, financial and operational development of the business from the outset, drawing on his extensive knowledge and experience.
 					</p>
 				</div>
 			</div>
@@ -657,6 +662,10 @@
 
 
 	<script src="js/scripts.min.js"></script>
+
+	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="https://vjs.zencdn.net/5.18.4/video.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.3.3/videojs-contrib-hls.js"></script>
 
 </body>
 </html>
