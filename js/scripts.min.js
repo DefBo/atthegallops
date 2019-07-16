@@ -90,3 +90,9 @@ addActiveToggle(x);
 x.addListener(addActiveToggle);
 
 
+/*Add class to video when it's loaded*/
+window.onload = function() {
+    document.getElementById('main-video-bg').classList.add('_visible');
+};
+
+
