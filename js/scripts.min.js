@@ -95,4 +95,56 @@ window.onload = function() {
     document.getElementById('main-video-bg').classList.add('_visible');
 };
 
+// Contact Form
+const sendContactForm = (form, formResponse, data) => {
+  
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action, true);
+    xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+    xhr.send(JSON.stringify(data));
+
+    xhr.onloadend = response => {
+
+        if (response.target.status === 200) {
+            // The form submission was successful
+            form.reset();
+            formResponse.innerHTML = 'Thanks for the message. We\'ll be in touch shortly.';
+        } else {
+            // The form submission failed
+            formResponse.innerHTML = 'Something went wrong. Your message was not sent!';
+            console.error(JSON.parse(response.target.response).message);
+        }
+    }
+}
+
+
+// Contact form submission
+const form = document.querySelector('form');
+const formResponse = document.querySelector('#js-form-response');
+const recaptchaKey = '6LeII68UAAAAALzbw_Vyy07O8QXyz8R6-qzr9ymU'
+
+form.onsubmit = e => {
+    e.preventDefault()
+
+    // Prepare data to send
+    const data = {}
+    const formElements = Array.from(form).filter(e => e.name)
+    formElements.map(input => (data[input.name] = input.value))
+
+    grecaptcha.ready(function() {
+        grecaptcha.execute(recaptchaKey, { action: 'send_email' }).then(function(token) {
+            
+            data.recaptchaToken = token
+
+            // Log what our lambda function will receive
+            console.log(JSON.stringify(data))
+
+            // Send Contact Form
+            sendContactForm(form, formResponse, data)
+        });
+    });
+
+};
 

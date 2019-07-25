@@ -10,7 +10,7 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
+
 	<!-- Template Basic Images Start -->
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
@@ -19,6 +19,10 @@
 	<link rel="stylesheet" href="css/main.min.css">
 
 	<link href="https://vjs.zencdn.net/5.18.4/video-js.css" rel="stylesheet">
+
+	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="https://vjs.zencdn.net/5.18.4/video.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.3.3/videojs-contrib-hls.js"></script>
 </head>
 
 <body>
@@ -84,14 +88,13 @@
 					data-setup='{
 					"autoplay": true,
 					"controls": true,
-					"preload": "auto", 
+					"preload": "auto",
 					"fluid": true,
 					"poster": "https://livestream.agricamera.co.uk/931-gallops-camera-iframe/snapshot.jpg"
-					}'
-				   	src="blob:https://livestream.agricamera.co.uk/724d3c4d-8d99-4dfc-8595-66c22900e050">
-
+					}'>
 					<source src="https://livestream.agricamera.co.uk:8081/agricamera/kimbailey/playlist.m3u8" type="application/x-mpegURL">
 				</video>
+
 			</div>
 
 			<div class="container">
@@ -106,7 +109,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="dashboard" id="dashboard">
 
 		<div class="dashboard__content">
@@ -115,7 +118,7 @@
 					<div class="col">
 						<h2 class="heading_2">At the Gallops Dashboard</h2>
 						<p class="description">
-							At The Gallops connects the camera to the internet via wireless or 4G technology. Simple to setup, our online dashboard and mobile app allows your owners to view the cameras on their smartphone, tablet, laptop or personal computer. 
+							At The Gallops connects the camera to the internet via wireless or 4G technology. Simple to setup, our online dashboard and mobile app allows your owners to view the cameras on their smartphone, tablet, laptop or personal computer.
 						</p>
 
 						<div class="dashboard__inner">
@@ -301,7 +304,7 @@
 								The wireless transmitter/receiver connect broadband internet to the At The Gallops camera. With 'line of sight', they can work over a distance of 2km. They are waterproof and capable of internal or external operation. Where wireless broadband is not available, we can supply a 4G solution. As long as you have a 4G connectivity, a 4G contract can be supplied allowing the cameras to connect to the internet.
 
 							</div>
-							
+
 						</div>
 
                         <div class="how-it-works__tag _platform">
@@ -553,7 +556,7 @@
 
 				<div class="col team__member-info-wrap">
 					<p class="description team__member-info _first">
-						<b>Jake</b> is the founder of Rugged Networks Limited and the AgriCamera proposition. His role is to draw on his technical skills and farming knowledge to innovate; he works with the platform development team to constantly evolve our service delivery in light of a fast moving technological environment.  
+						<b>Jake</b> is the founder of Rugged Networks Limited and the AgriCamera proposition. His role is to draw on his technical skills and farming knowledge to innovate; he works with the platform development team to constantly evolve our service delivery in light of a fast moving technological environment.
 					</p>
 					<p class="description team__member-info _second">
 						<b>Ben</b> joined the business in 2014 and has developed his own technical knowledge so as to be a true product expert. He utilises this knowledge to provide quality control at point of sale, ensure system set up on delivery and to solve customer problems as they arise.
@@ -590,25 +593,28 @@
 				</div>
 				<div class="col-lg-6 col-md-12">
 
-					<form action="#" method="post" name="contact-form" class="contact__form">
+					<form action="https://mtkd9abof9.execute-api.us-east-1.amazonaws.com/production/static-site-mailer" method="post" name="contact-form" class="contact__form">
 						<div class="contact-form__field">
 							<label for="user-name" class="contact-form__field-label">Name</label>
-							<input type="text" name="name" id="user-name" class="contact-form__field-text">
+							<input required type="text" name="name" id="user-name" class="contact-form__field-text">
 						</div>
 						<div class="contact-form__field">
 							<label for="email-address" class="contact-form__field-label">Email Address</label>
-							<input type="text" name="email address" id="email-address" class="contact-form__field-text">
+							<input required type="email" name="email" id="email-address" class="contact-form__field-text">
 						</div>
 						<div class="contact-form__field">
-							<label for="user-phone" class="contact-form__field-label">Phone</label>
-							<input type="text" name="phone" id="user-phone" class="contact-form__field-text">
+							<label for="user-tel" class="contact-form__field-label">Phone</label>
+							<input required type="tel" name="tel" id="user-tel" class="contact-form__field-text">
 						</div>
 						<div class="contact-form__field">
 							<label for="user-message" class="contact-form__field-label">Message</label>
-							<textarea name="message" id="user-message" class="contact-form__field-textarea"></textarea>
+							<textarea required name="message" id="user-message" class="contact-form__field-textarea"></textarea>
 						</div>
+
 						<input type="submit" value="Submit" class="contact-form__submit">
 					</form>
+
+					<p id="js-form-response"></p>
 
 				</div>
 			</div>
@@ -668,11 +674,8 @@
 	</div>
 
 
+	<script src="https://www.google.com/recaptcha/api.js?render=6LeII68UAAAAALzbw_Vyy07O8QXyz8R6-qzr9ymU"></script>
 	<script src="js/scripts.min.js"></script>
-
-	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-	<script src="https://vjs.zencdn.net/5.18.4/video.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.3.3/videojs-contrib-hls.js"></script>
 
 </body>
 </html>
